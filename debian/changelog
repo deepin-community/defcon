@@ -1,0 +1,96 @@
+defcon (0.9.0-1) unstable; urgency=medium
+
+  [ Hideki Yamane ]
+  * New upstream version 0.9.0
+
+ -- Yao Wei (魏銘廷) <mwei@debian.org>  Sun, 29 Aug 2021 14:26:08 +0800
+
+defcon (0.8.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable
+
+  * debian/control
+    - Set Standards-Version: 4.6.0
+  * Add debian/salsa-ci.yml
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 18 Aug 2021 22:59:31 +0900
+
+defcon (0.8.1-1) experimental; urgency=medium
+
+  * Team upload.
+
+  * New upstream version 0.8.1
+
+  * debian/control
+    - Update dependency: python3-fonttools (>= 4.21.1)
+    - Add Build-Depends: python3-setuptools-scm
+  * debian/rules
+    - Ignore clean target failure
+  * Add debian/source/options
+    - Ignore .eggs/* and .pybuild/* changes
+    - Also ignore changes in Lib/defcon/_version.py
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 10 Jul 2021 10:53:22 +0900
+
+defcon (0.7.2-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Yao Wei (魏銘廷) ]
+  * debian/watch: Change GitHub archive URL
+
+  [ Hideki Yamane ]
+  * debian/control
+    - Set Standards-Version: 4.5.1
+    - Set debhelper-compat (= 13)
+    - Add Rules-Requires-Root: no
+    - Add Testsuite: autopkgtest-pkg-python
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 10 Jul 2021 09:36:04 +0900
+
+defcon (0.7.2-1) unstable; urgency=medium
+
+  * New upstream version 0.7.2
+  * Use debhelper 12
+  * debian/control:
+    - Bump Standards-Version to 4.5.0
+    - Update dependencies from upstream
+    - Add sphinxdoc dependency
+
+ -- Yao Wei (魏銘廷) <mwei@debian.org>  Sun, 31 May 2020 10:13:33 +0800
+
+defcon (0.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control:
+    - Update team mailing list and uploader address
+    - Update dependency
+    - Bump policy version to 4.2.1
+
+ -- Yao Wei (魏銘廷) <mwei@debian.org>  Thu, 29 Nov 2018 16:05:57 +0800
+
+defcon (0.5.2-2) unstable; urgency=medium
+
+  * Recommend python3-fontpens
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 05 Sep 2018 09:20:12 -0400
+
+defcon (0.5.2-1) unstable; urgency=medium
+
+  [ Yao Wei (魏銘廷) ]
+  * New upstream release.
+  * debian/control:
+    - Update team mailing list address
+
+  [ Jeremy Bicha ]
+  * Bump python3-fonttools to >= 3.29.0 & python3-ufolib to >= 2.3.1
+  * Bump debhelper compat to 11
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 03 Sep 2018 13:43:59 -0400
+
+defcon (0.3.5-1) unstable; urgency=low
+
+  * Initial release. Closes: #806513
+
+ -- Yao Wei (魏銘廷) <mwei@lxde.org>  Sat, 18 Nov 2017 22:11:54 +0800
