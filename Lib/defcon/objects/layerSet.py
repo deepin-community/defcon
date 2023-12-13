@@ -66,6 +66,7 @@ class LayerSet(BaseObject):
         self._defaultLayer = None
 
         self._layerActionHistory = []
+        self._dirty = False
 
     def __del__(self):
         super(LayerSet, self).__del__()
@@ -381,13 +382,15 @@ class LayerSet(BaseObject):
     # External Edit Support
     # ---------------------
 
-    def _stampLayerInfoDataState(self, layer):
-        if layer._glyphSet is None:
+    def _stampLayerInfoDataState(self, layer, glyphSet=None):
+        if glyphSet is None:
+            glyphSet = layer._glyphSet
+        if glyphSet is None:
             return
         # there isn't a mod time function
         # so load the data and pack it.
         i = _StaticLayerInfoMaker()
-        layer._glyphSet.readLayerInfo(i)
+        glyphSet.readLayerInfo(i)
         layer._dataOnDisk = i.pack()
 
     def testForExternalChanges(self, reader):
@@ -423,8 +426,9 @@ class LayerSet(BaseObject):
             modifiedGlyphs, addedGlyphs, deletedGlyphs = layer.testForExternalChanges(reader)
             newLayerInfo = _StaticLayerInfoMaker()
             layerInfoChanged = False
-            if layer._glyphSet is not None:
-                layer._glyphSet.readLayerInfo(newLayerInfo)
+            glyphSet = reader.getGlyphSet(layerName=layer.name, validateRead=layer.ufoLibReadValidate)
+            if glyphSet is not None:
+                glyphSet.readLayerInfo(newLayerInfo)
                 layerInfoChanged = layer._dataOnDisk != newLayerInfo.pack()
             if modifiedGlyphs or addedGlyphs or deletedGlyphs or layerInfoChanged:
                 modifiedLayers[layerName] = dict(

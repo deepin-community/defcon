@@ -8,12 +8,12 @@ Build-Depends: debhelper-compat (= 13),
                python3-all,
                python3-setuptools,
                python3-setuptools-scm,
-               python3-fonttools (>= 4.26.2),
+               python3-fonttools (>= 4.28.5),
                python3-fontpens (>= 0.1.0),
                python3-appdirs,
                python3-sphinx
-Standards-Version: 4.6.0
-Homepage: https://github.com/typesupply/defcon
+Standards-Version: 4.6.2
+Homepage: https://github.com/robotools/defcon
 Vcs-Git: https://salsa.debian.org/fonts-team/defcon.git
 Vcs-Browser: https://salsa.debian.org/fonts-team/defcon
 Rules-Requires-Root: no
