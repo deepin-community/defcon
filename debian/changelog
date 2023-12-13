@@ -1,3 +1,31 @@
+defcon (0.10.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control:
+    + Update homepage information.
+    + Bump Standards-Version to 4.6.2.
+  * debian/watch: Fix monitoring script.
+  * debian/source/options: Fix extended-diff-ignore syntax.
+    (Closes: #1044844)
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 20 Aug 2023 14:20:43 -0400
+
+defcon (0.10.1-1) unstable; urgency=medium
+
+  * New upstream version 0.10.1
+  * debian/gbp.conf: Use debian/latest as default debian branch for DEP-14
+  * debian/control: Bump Standards-Version to 4.6.1; No other changes are
+    needed.
+
+ -- Yao Wei (魏銘廷) <mwei@debian.org>  Sun, 29 May 2022 12:44:09 +0800
+
+defcon (0.10.0-1) unstable; urgency=medium
+
+  * New upstream version 0.10.0
+  * debian/control: Update dependencies
+
+ -- Yao Wei (魏銘廷) <mwei@debian.org>  Wed, 13 Apr 2022 23:26:40 +0800
+
 defcon (0.9.0-1) unstable; urgency=medium
 
   [ Hideki Yamane ]

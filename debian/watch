@@ -1,3 +1,4 @@
 version=4
-https://github.com/typesupply/defcon/releases \
- .*/archive/refs/tags/@ANY_VERSION@@ARCHIVE_EXT@
+opts="filenamemangle=s%(?:.*?)?v?@ANY_VERSION@(@ARCHIVE_EXT@)%@PACKAGE@-$1$2%" \
+ https://github.com/robotools/defcon/tags \
+ (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@

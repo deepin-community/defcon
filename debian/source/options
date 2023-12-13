@@ -1,3 +1,3 @@
-extend-diff-ignore = "^[^/]*[.]eggs/"
-extend-diff-ignore = "^[^/]*[.]pybuild/"
+extend-diff-ignore = "^[^/]*[.]egg-info/"
+extend-diff-ignore = "^Lib/[^/]*[.]egg-info/"
 extend-diff-ignore = Lib/defcon/_version.py
